@@ -3,7 +3,7 @@ class Anyhooks < Formula
   homepage "https://github.com/Malnati/AnyHooks"
   url "https://github.com/Malnati/AnyHooks/archive/refs/tags/v1.0.0-alpha.tar.gz"
   sha256 "2fe2a759416c5f09778fe41b50ab07fba0cf964c13fb7c0e6a3cf6428e87e3a2"
-  license "MIT"  # Update this based on your project's license
+  license "MIT" # Update this based on your project's license
 
   depends_on "curl"
   depends_on "jq"
@@ -11,9 +11,9 @@ class Anyhooks < Formula
 
   def install
     Dir["rc/*", "rc/.*"].each do |file|
-      next if File.directory?(file)  # Skip directories
+      next if File.directory?(file) # Skip directories
 
-      if file.end_with?('.enc')
+      if file.end_with?(".enc")
         # Place non-executable files in a different directory
         prefix.install file
       else
@@ -26,3 +26,4 @@ class Anyhooks < Formula
     system "#{bin}/rc/anyhooks", "--version"
   end
 end
+
