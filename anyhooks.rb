@@ -10,11 +10,9 @@ class Anyhooks < Formula
   depends_on "openssl"
 
   def install
-    bin.install "rc/anyhooks/*"
-    # bin.install "rc/anyhooksencrypt"
-    # bin.install "rc/anyhookslang"
-    # bin.install "rc/anyhooksrc"
-    # bin.install "rc/anyhooksver"
+    Dir["rc/*"].each do |file|
+      bin.install file
+    end
   end
 
   test do
