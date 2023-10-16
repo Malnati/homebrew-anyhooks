@@ -13,7 +13,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 To add this tap to your Homebrew installation, run the following command:
 
 ```bash
-brew tap Malnati/tap-anyhooks
+brew tap Malnati/anyhooks
 ```
 
 After tapping, you can install AnyHooks as follows:
