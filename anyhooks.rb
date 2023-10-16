@@ -12,6 +12,7 @@ class Anyhooks < Formula
   def install
     (prefix/"rc").install Dir["rc/*"]
     bin.install_symlink prefix/"rc/anyhooks"
+    bin.install "rc/anyhooks"
   end
 
   test do
