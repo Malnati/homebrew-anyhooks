@@ -10,7 +10,8 @@ class Anyhooks < Formula
   depends_on "openssl"
 
   def install
-    Dir["rc/*"].each do |file|
+    Dir["rc/*", "rc/.*"].each do |file|
+      next if File.directory?(file)  # Skip directories
       bin.install file
     end
   end
