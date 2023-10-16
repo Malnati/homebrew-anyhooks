@@ -12,7 +12,13 @@ class Anyhooks < Formula
   def install
     Dir["rc/*", "rc/.*"].each do |file|
       next if File.directory?(file)  # Skip directories
-      bin.install file
+
+      if file.end_with?('.enc')
+        # Place non-executable files in a different directory
+        prefix.install file
+      else
+        bin.install file
+      end
     end
   end
 
