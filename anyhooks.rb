@@ -10,8 +10,7 @@ class Anyhooks < Formula
   depends_on "openssl"
 
   def install
-    system "mkdir -p /usr/local/Cellar/anyhooks/v0.2-alpha/rc"
-    system "cp ./rc/* /usr/local/Cellar/anyhooks/v0.2-alpha/rc"
+    (prefix/"rc").install Dir["rc/*"]
   end
 
   test do
