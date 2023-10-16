@@ -17,4 +17,3 @@ class Anyhooks < Formula
     system "#{bin}/rc/anyhooks", "--version"
   end
 end
-
