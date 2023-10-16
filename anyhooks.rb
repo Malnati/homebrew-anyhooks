@@ -5,6 +5,7 @@ class Anyhooks < Formula
   sha256 "2fe2a759416c5f09778fe41b50ab07fba0cf964c13fb7c0e6a3cf6428e87e3a2"
   license "MIT" # Update this based on your project's license
 
+  depends_on "coreutils"
   depends_on "curl"
   depends_on "jq"
   depends_on "openssl"
