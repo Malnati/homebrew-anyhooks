@@ -10,14 +10,12 @@ class Anyhooks < Formula
   depends_on "openssl"
 
   def install
-    bin.install "rc/anyhooks"
-    bin.install "rc/anyhookslang"
-    bin.install "rc/anyhooksver"
-    bin.install "rc/openaikey"
+    system "mkdir -p /usr/local/Cellar/anyhooks/v0.2-alpha/rc"
+    system "cp ./rc/* /usr/local/Cellar/anyhooks/v0.2-alpha/rc"
   end
 
   test do
-    system "#{bin}/anyhooks", "--version"
+    system "#{bin}/rc/anyhooks", "--version"
   end
 end
 
