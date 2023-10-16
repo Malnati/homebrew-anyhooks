@@ -10,7 +10,7 @@ class Anyhooks < Formula
   depends_on "openssl"
 
   def install
-    Dir["rc/*", "rc/.*"].each do |file|
+    Dir["rc/*", "rc/.*", "hooks/"].each do |file|
       next if File.directory?(file) # Skip directories
 
       if file.end_with?(".enc")
